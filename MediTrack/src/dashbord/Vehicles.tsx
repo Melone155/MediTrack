@@ -13,25 +13,25 @@ const Vehicles: React.FC = () => {
 
     const vehicleMedications = {
         'rtw-01': [
-            { id: 1, name: 'Adrenalin 1mg/ml', quantity: 8, expiry: '2024-02-15', status: 'critical' },
-            { id: 2, name: 'Atropin 0.5mg', quantity: 4, expiry: '2024-03-20', status: 'warning' },
-            { id: 3, name: 'Midazolam 5mg', quantity: 6, expiry: '2024-06-10', status: 'ok' },
-            { id: 4, name: 'Morphin 10mg', quantity: 3, expiry: '2024-05-15', status: 'ok' },
-            { id: 5, name: 'Glucose 40%', quantity: 10, expiry: '2024-04-22', status: 'ok' },
+            { id: 1, name: 'Adrenalin 1mg/ml', quantity: 8, expiry: '2025-07-15', status: 'critical' },
+            { id: 2, name: 'Atropin 0.5mg', quantity: 4, expiry: '2025-08-5', status: 'warning' },
+            { id: 3, name: 'Midazolam 5mg', quantity: 6, expiry: '2025-08-10', status: 'ok' },
+            { id: 4, name: 'Morphin 10mg', quantity: 3, expiry: '2025-09-15', status: 'ok' },
+            { id: 5, name: 'Glucose 40%', quantity: 10, expiry: '2025-10-22', status: 'ok' },
         ],
         'rtw-02': [
-            { id: 6, name: 'Adrenalin 1mg/ml', quantity: 6, expiry: '2024-01-28', status: 'critical' },
-            { id: 7, name: 'Prednisolon 250mg', quantity: 2, expiry: '2024-03-15', status: 'warning' },
-            { id: 8, name: 'Furosemid 20mg', quantity: 8, expiry: '2024-07-30', status: 'ok' },
+            { id: 6, name: 'Adrenalin 1mg/ml', quantity: 6, expiry: '2025-07-28', status: 'critical' },
+            { id: 7, name: 'Prednisolon 250mg', quantity: 2, expiry: '2025-08-2', status: 'warning' },
+            { id: 8, name: 'Furosemid 20mg', quantity: 8, expiry: '2025-09-30', status: 'ok' },
         ],
         'ktw-01': [
-            { id: 9, name: 'Metamizol 500mg', quantity: 12, expiry: '2024-04-10', status: 'ok' },
-            { id: 10, name: 'Paracetamol 1000mg', quantity: 20, expiry: '2024-05-25', status: 'ok' },
+            { id: 9, name: 'Metamizol 500mg', quantity: 12, expiry: '2026-04-10', status: 'ok' },
+            { id: 10, name: 'Paracetamol 1000mg', quantity: 20, expiry: '2026-05-25', status: 'ok' },
         ],
         'nef-01': [
-            { id: 11, name: 'Adrenalin 1mg/ml', quantity: 10, expiry: '2024-03-05', status: 'warning' },
-            { id: 12, name: 'Atropin 0.5mg', quantity: 8, expiry: '2024-06-18', status: 'ok' },
-            { id: 13, name: 'Midazolam 5mg', quantity: 12, expiry: '2024-04-30', status: 'ok' },
+            { id: 11, name: 'Adrenalin 1mg/ml', quantity: 10, expiry: '2025-08-6', status: 'warning' },
+            { id: 12, name: 'Atropin 0.5mg', quantity: 8, expiry: '2026-06-18', status: 'ok' },
+            { id: 13, name: 'Midazolam 5mg', quantity: 12, expiry: '2026-04-30', status: 'ok' },
         ],
     };
 
@@ -65,8 +65,6 @@ const Vehicles: React.FC = () => {
             return `${Math.abs(diffDays)} Tage überfällig`;
         } else if (diffDays <= 30) {
             return `${diffDays} Tage verbleibend`;
-        } else {
-            return `${Math.floor(diffDays / 30)} Monate verbleibend`;
         }
     };
 
