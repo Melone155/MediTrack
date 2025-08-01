@@ -15,13 +15,13 @@ const Inventory: React.FC = () => {
 
     const medications = [
         { id: 1, name: 'Morphin 10mg', warehouse: 'Hauptlager', current: 2, min: 5, unit: 'Ampullen', status: 'critical' },
-        { id: 2, name: 'Glucose 40%', warehouse: 'Hauptlager', current: 6, min: 10, unit: 'Ampullen', status: 'warning' },
-        { id: 3, name: 'Adrenalin 1mg/ml', warehouse: 'RTW-01', current: 8, min: 6, unit: 'Ampullen', status: 'ok' },
-        { id: 4, name: 'Atropin 0.5mg', warehouse: 'RTW-01', current: 4, min: 8, unit: 'Ampullen', status: 'warning' },
-        { id: 5, name: 'Midazolam 5mg', warehouse: 'RTW-02', current: 12, min: 10, unit: 'Ampullen', status: 'ok' },
+        { id: 2, name: 'Glucose 40%', warehouse: 'Hauptlager', current: 6, min: 10, unit: 'Ampullen', status: 'critical' },
+        { id: 3, name: 'Adrenalin 1mg/ml', warehouse: 'Lager-02', current: 8, min: 6, unit: 'Ampullen', status: 'ok' },
+        { id: 4, name: 'Atropin 0.5mg', warehouse: 'Lager-01', current: 10, min: 8, unit: 'Ampullen', status: 'warning' },
+        { id: 5, name: 'Midazolam 5mg', warehouse: 'Lager-02', current: 12, min: 10, unit: 'Ampullen', status: 'warning' },
         { id: 6, name: 'Prednisolon 250mg', warehouse: 'Hauptlager', current: 1, min: 3, unit: 'Ampullen', status: 'critical' },
-        { id: 7, name: 'Furosemid 20mg', warehouse: 'KTW-01', current: 15, min: 8, unit: 'Ampullen', status: 'ok' },
-        { id: 8, name: 'Metamizol 500mg', warehouse: 'RTW-01', current: 20, min: 15, unit: 'Ampullen', status: 'ok' },
+        { id: 7, name: 'Furosemid 20mg', warehouse: 'Lager-03', current: 15, min: 8, unit: 'Ampullen', status: 'ok' },
+        { id: 8, name: 'Metamizol 500mg', warehouse: 'Lager-01', current: 20, min: 15, unit: 'Ampullen', status: 'ok' },
     ];
 
     const filteredMedications = medications
@@ -31,8 +31,8 @@ const Inventory: React.FC = () => {
         )
         .sort((a, b) => {
             // Kritische und Warnungen ganz oben
-            if (a.status === 'critical' && b.status !== 'critical') return -1;
-            if (b.status === 'critical' && a.status !== 'critical') return 1;
+            if (a.status === 'critical' && b.status !== 'critical') return -3;
+            if (b.status === 'critical' && a.status !== 'critical') return 3;
             if (a.status === 'warning' && b.status === 'ok') return -1;
             if (b.status === 'warning' && a.status === 'ok') return 1;
             return a.name.localeCompare(b.name);
@@ -135,7 +135,7 @@ const Inventory: React.FC = () => {
                                 <div
                                     className={`h-2 rounded-full transition-all ${
                                         medication.current < medication.min ? 'bg-red-500' :
-                                            medication.current <= medication.min * 1.2 ? 'bg-yellow-500' : 'bg-green-500'
+                                            medication.current <= medication.min * 1.3 ? 'bg-yellow-500' : 'bg-green-500'
                                     }`}
                                     style={{ width: `${Math.min((medication.current / medication.min) * 100, 100)}%` }}
                                 ></div>
