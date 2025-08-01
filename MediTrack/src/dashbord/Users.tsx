@@ -5,12 +5,11 @@ const Users: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const users = [
-        { id: 1, name: 'Dr. Sarah Mueller', email: 'sarah.mueller@meditrack.de', role: 'Admin', status: 'active', lastLogin: '2024-01-30' },
-        { id: 2, name: 'Max Mustermann', email: 'max.mustermann@meditrack.de', role: 'User', status: 'active', lastLogin: '2024-01-29' },
-        { id: 3, name: 'Anna Schmidt', email: 'anna.schmidt@meditrack.de', role: 'User', status: 'active', lastLogin: '2024-01-28' },
-        { id: 4, name: 'Thomas Weber', email: 'thomas.weber@meditrack.de', role: 'Supervisor', status: 'active', lastLogin: '2024-01-27' },
-        { id: 5, name: 'Lisa Johnson', email: 'lisa.johnson@meditrack.de', role: 'User', status: 'inactive', lastLogin: '2024-01-15' },
-        { id: 6, name: 'Michael Brown', email: 'michael.brown@meditrack.de', role: 'User', status: 'active', lastLogin: '2024-01-30' },
+        { id: 1, name: 'Dr. Sarah Mueller', email: 'sarah.mueller@meditrack.de', role: 'Admin', status: 'active', lastLogin: '2025-07-30' },
+        { id: 2, name: 'Max Mustermann', email: 'max.mustermann@meditrack.de', role: 'User', status: 'active', lastLogin: '2024-07-29' },
+        { id: 3, name: 'Anna Schmidt', email: 'anna.schmidt@meditrack.de', role: 'User', status: 'active', lastLogin: '2024-07-28' }, ,
+        { id: 5, name: 'Lisa Johnson', email: 'lisa.johnson@meditrack.de', role: 'User', status: 'inactive', lastLogin: '2024-07-15' },
+        { id: 6, name: 'Michael Brown', email: 'michael.brown@meditrack.de', role: 'User', status: 'active', lastLogin: '2024-07-30' },
     ];
 
     const filteredUsers = users.filter(user =>
