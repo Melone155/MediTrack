@@ -31,8 +31,8 @@ const Inventory: React.FC = () => {
         )
         .sort((a, b) => {
             // Kritische und Warnungen ganz oben
-            if (a.status === 'critical' && b.status !== 'critical') return -3;
-            if (b.status === 'critical' && a.status !== 'critical') return 3;
+            if (a.status === 'critical' && b.status !== 'critical') return -1;
+            if (b.status === 'critical' && a.status !== 'critical') return 1;
             if (a.status === 'warning' && b.status === 'ok') return -1;
             if (b.status === 'warning' && a.status === 'ok') return 1;
             return a.name.localeCompare(b.name);
