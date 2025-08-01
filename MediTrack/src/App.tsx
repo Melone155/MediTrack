@@ -1,21 +1,34 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-
-import Dashboard from "./dashbord/Dashboard.tsx"
-import UserManagement from "./dashbord/Users.tsx"
-import Inventory from "./dashbord/Inventory.tsx"
-import Vehicles from "./dashbord/Vehicles.tsx"
+import { useState } from 'react';
+import Navigation from './components/Navigation';
+import Dashboard from './dashbord/Dashboard';
+import Inventory from './dashbord/Inventory';
+import Vehicles from './dashbord/Vehicles';
+import Users from './dashbord/Users';
 
 function App() {
+    const [activeTab, setActiveTab] = useState('dashboard');
+
+    const renderContent = () => {
+        switch (activeTab) {
+            case 'dashboard':
+                return <Dashboard />;
+            case 'inventory':
+                return <Inventory />;
+            case 'vehicles':
+                return <Vehicles />;
+            case 'users':
+                return <Users />;
+            default:
+                return <Dashboard />;
+        }
+    };
+
     return (
-        <Router>
-            <Routes>
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/management" element={<UserManagement />} />
-                <Route path="/inventory" element={<Inventory />} />
-                <Route path="/vehicles" element={<Vehicles />} />
-            </Routes>
-        </Router>
-    )
+        <div className="min-h-screen bg-gray-50">
+            <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
+            {renderContent()}
+        </div>
+    );
 }
 
-export default App
+export default App;

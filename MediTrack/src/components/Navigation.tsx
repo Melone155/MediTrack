@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import { Package, Truck, Users, BarChart3, AlertTriangle } from 'lucide-react';
 
