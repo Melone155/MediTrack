@@ -5,10 +5,10 @@ const Vehicles: React.FC = () => {
     const [selectedVehicle, setSelectedVehicle] = useState('rtw-01');
 
     const vehicles = [
-        { id: 'rtw-01', model: 'Mercedes Sprinter RTW', plate: 'SEG-RT 01', type: 'RTW' },
-        { id: 'rtw-02', model: 'VW Crafter RTW', plate: 'SEG-RT 02', type: 'RTW' },
-        { id: 'ktw-01', model: 'Ford Transit KTW', plate: 'SEG-KT 01', type: 'KTW' },
-        { id: 'nef-01', model: 'BMW X5 NEF', plate: 'SEG-NE 01', type: 'NEF' },
+        { id: 'rtw-01', model: 'RTW', plate: 'HN-RT 01', type: 'RTW' },
+        { id: 'rtw-02', model: 'RTW', plate: 'HN-RT 02', type: 'RTW' },
+        { id: 'ktw-01', model: 'KTW', plate: 'HN-KT 01', type: 'KTW' },
+        { id: 'nef-01', model: 'KTW', plate: 'HN-NE 02', type: 'KTW' },
     ];
 
     const vehicleMedications = {
