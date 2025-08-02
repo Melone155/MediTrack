@@ -63,7 +63,7 @@ const Vehicles: React.FC = () => {
 
         if (diffDays < 0) {
             return `${Math.abs(diffDays)} Tage überfällig`;
-        } else if (diffDays <= 30) {
+        } else if (diffDays <= 10) {
             return `${diffDays} Tage verbleibend`;
         }
     };
