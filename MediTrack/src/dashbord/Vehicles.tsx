@@ -8,30 +8,30 @@ const Vehicles: React.FC = () => {
         { id: 'rtw-01', model: 'RTW', plate: 'HN-RT 01', type: 'RTW' },
         { id: 'rtw-02', model: 'RTW', plate: 'HN-RT 02', type: 'RTW' },
         { id: 'ktw-01', model: 'KTW', plate: 'HN-KT 01', type: 'KTW' },
-        { id: 'nef-01', model: 'KTW', plate: 'HN-NE 02', type: 'KTW' },
+        { id: 'ktw-02', model: 'KTW', plate: 'HN-NE 02', type: 'KTW' },
     ];
 
     const vehicleMedications = {
         'rtw-01': [
-            { id: 1, name: 'Adrenalin 1mg/ml', quantity: 8, expiry: '2025-07-15', status: 'critical' },
-            { id: 2, name: 'Atropin 0.5mg', quantity: 4, expiry: '2025-08-5', status: 'warning' },
-            { id: 3, name: 'Midazolam 5mg', quantity: 6, expiry: '2025-08-10', status: 'ok' },
-            { id: 4, name: 'Morphin 10mg', quantity: 3, expiry: '2025-09-15', status: 'ok' },
-            { id: 5, name: 'Glucose 40%', quantity: 10, expiry: '2025-10-22', status: 'ok' },
+            { id: "7mMhK", name: 'Adrenalin 1mg/ml', expiry: '2025-07-15', status: 'critical' },
+            { id: "I8DUi", name: 'Atropin 0.5mg', expiry: '2025-08-5', status: 'warning' },
+            { id: "dnYk5", name: 'Midazolam 5mg', expiry: '2025-08-10', status: 'ok' },
+            { id: "oHZZ3", name: 'Morphin 10mg', expiry: '2025-09-15', status: 'ok' },
+            { id: "Eu8oh", name: 'Glucose 40%', expiry: '2025-10-22', status: 'ok' },
         ],
         'rtw-02': [
-            { id: 6, name: 'Adrenalin 1mg/ml', quantity: 6, expiry: '2025-07-28', status: 'critical' },
-            { id: 7, name: 'Prednisolon 250mg', quantity: 2, expiry: '2025-08-2', status: 'warning' },
-            { id: 8, name: 'Furosemid 20mg', quantity: 8, expiry: '2025-09-30', status: 'ok' },
+            { id: "A2vvK", name: 'Adrenalin 1mg/ml', expiry: '2025-07-28', status: 'critical' },
+            { id: "Kb9Ko", name: 'Prednisolon 250mg', expiry: '2025-08-2', status: 'warning' },
+            { id: "4F3Xi", name: 'Furosemid 20mg', expiry: '2025-09-30', status: 'ok' },
         ],
         'ktw-01': [
-            { id: 9, name: 'Metamizol 500mg', quantity: 12, expiry: '2026-04-10', status: 'ok' },
-            { id: 10, name: 'Paracetamol 1000mg', quantity: 20, expiry: '2026-05-25', status: 'ok' },
+            { id: "z7StD", name: 'Metamizol 500mg', expiry: '2026-04-10', status: 'ok' },
+            { id: "K3Cqg", name: 'Paracetamol 1000mg', expiry: '2026-05-25', status: 'ok' },
         ],
-        'nef-01': [
-            { id: 11, name: 'Adrenalin 1mg/ml', quantity: 10, expiry: '2025-08-6', status: 'warning' },
-            { id: 12, name: 'Atropin 0.5mg', quantity: 8, expiry: '2026-06-18', status: 'ok' },
-            { id: 13, name: 'Midazolam 5mg', quantity: 12, expiry: '2026-04-30', status: 'ok' },
+        'ktw-02': [
+            { id: "rIQK5", name: 'Adrenalin 1mg/ml', expiry: '2025-08-6', status: 'warning' },
+            { id: "U1HAe", name: 'Atropin 0.5mg', expiry: '2026-06-18', status: 'ok' },
+            { id: "1CEdQ", name: 'Midazolam 5mg', expiry: '2026-04-30', status: 'ok' },
         ],
     };
 
@@ -146,7 +146,7 @@ const Vehicles: React.FC = () => {
                                                 }`}></div>
                                                 <div>
                                                     <h3 className="font-medium text-gray-900">{medication.name}</h3>
-                                                    <p className="text-sm text-gray-600">Menge: {medication.quantity} Stück</p>
+                                                    <p className="text-sm text-gray-600">{medication.id}</p>
                                                 </div>
                                             </div>
 
